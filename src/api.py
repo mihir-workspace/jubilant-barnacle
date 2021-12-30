@@ -28,7 +28,7 @@ def from_info_extractor(file:UploadFile=File(...)):
         "results":results,
     }
 
-@endpoints.get("/")
+@endpoints.get("/isAlive")
 def ping():
 
     data = {
