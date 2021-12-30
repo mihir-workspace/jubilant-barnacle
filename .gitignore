@@ -136,4 +136,6 @@ data/
 data/
 models/
 temp/
->>>>>>> fix the typo of models
+=======
+data/
+>>>>>>> parent of 3797904... Added gitiogne for model and data folder
