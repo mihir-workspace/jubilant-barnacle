@@ -130,4 +130,10 @@ dmypy.json
 .pyre/
 
 # Igonre the data folder
+<<<<<<< 8b6706727e9a47afefb95828c7136422a45e82b2
 data/
+=======
+data/
+models/
+temp/
+>>>>>>> fix the typo of models
