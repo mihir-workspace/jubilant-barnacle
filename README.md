@@ -4,8 +4,40 @@ This application is based on [hugginface](https://huggingface.co/) library, in p
 
 *API runs on the `10000` port and have the following endpoints:-*
 + ``/isAlive``  - *(get)* To verify and check the API running successfullly.
+sample CURL command 
+```
+curl -X 'GET' \
+  'http://0.0.0.0:10000/isAlive' \
+  -H 'accept: application/json'
+```
+sample output,
+```
+{
+  "Message_code": 200,
+  "Message": "Alive"
+}
+```
+
 
 + ``/extractor`` - *(post)* Upload the image to to extract the Image written text in and return.
+sample CURL command,
+```
+curl -X 'POST' \
+  'http://0.0.0.0:10000/extractor' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: multipart/form-data' \
+  -F 'file=@sample.jpg;type=image/jpeg'
+```
+
+sample output 
+```
+{
+  "Message": "File is saved successfully",
+  "data": "sample.jpg",
+  "results": "Robert Crane"
+}
+```
+
 
 Application is based on following python library stack- 
 + [fastapi](https://fastapi.tiangolo.com/)
