@@ -2,15 +2,30 @@
 
 This application is based on [hugginface](https://huggingface.co/) library, in particular [microsoft/trocr-base-handwritten](https://huggingface.co/microsoft/trocr-base-handwritten). 
 
-API runs on the 10000 port and have the following endpoints that it has,
+*API runs on the `10000` port and have the following endpoints:-*
 + ``/isAlive``  - *(get)* To verify and check the API running successfullly.
 
-+ ``extractor`` - *(post)* Upload the image to to extract the Image written text in and return.
++ ``/extractor`` - *(post)* Upload the image to to extract the Image written text in and return.
 
 Application is based on following python library stack- 
 + [fastapi](https://fastapi.tiangolo.com/)
 + [huggingface](https://huggingface.co/)
-+ [OpenCV](https://opencv.org/)~
++ [OpenCV](https://opencv.org/)
+
+#### To deploy the service -
+
+Using docker,
+```
+docker build -t ocrExtractorImg .
+```
+And run the docker 
+```
+docker run -p 10000:10000 --name ocrContinaer ocrExtractorImg
+```
+*Optionally pre-build huggingface models could by volumn mounted*
+```
+docker run -p 10000:10000 --name ocrContinaer -v <local_path>/models:/models ocrExtractorImg
+```
 
 To use in the local environment, following these steps:
 + Install ``requirements.txt``
