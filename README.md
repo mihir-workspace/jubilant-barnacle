@@ -2,6 +2,11 @@
 
 This application is based on [hugginface](https://huggingface.co/) library, in particular [microsoft/trocr-base-handwritten](https://huggingface.co/microsoft/trocr-base-handwritten). 
 
+### Demo 
+
+https://user-images.githubusercontent.com/58660351/147838454-0d32e2ec-9891-41b4-bb1c-1ddf879e73bb.mp4
+
+
 *API runs on the `10000` port and have the following endpoints:-*
 + ``/isAlive``  - *(get)* To verify and check the API running successfullly.
 sample CURL command 
