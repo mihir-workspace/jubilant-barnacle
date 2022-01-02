@@ -5,9 +5,10 @@ from fastapi import File, UploadFile, File
 import shutil
 from handwritten import OCRExtractor
 
-current_path = os.getcwd()
-temp_path = os.path.join(current_path,'temp')
-ocr_extractor = OCRExtractor(os.path.join(current_path,'models'))
+parent_path  = os.path.dirname(os.getcwd())
+
+temp_path = os.path.join(parent_path,'temp')
+ocr_extractor = OCRExtractor(os.path.join(parent_path,'models'))
 
 endpoints = fastapi.FastAPI()
 
